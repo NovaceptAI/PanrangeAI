@@ -1,0 +1,19 @@
+# Copyright 2021 Google LLC
+
+runtime: custom
+env: flex
+entrypoint: gunicorn -b :$PORT main:app
+
+runtime_config:
+  python_version: 3y
+
+manual_scaling:
+  instances: 1
+resources:
+  cpu: 2
+  memory_gb: 3
+  disk_size_gb: 16
+  volumes:
+  - name: ramdisk1
+    volume_type: tmpfs
+    size_gb: 2
