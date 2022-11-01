@@ -1,6 +1,6 @@
 # serverless.yml
 
-service: panrange-app
+service: web-erp
 
 plugins:
   - serverless-python-requirements
