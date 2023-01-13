@@ -20,3 +20,16 @@ def web_index():
 @bp.route('/erp_dashboard', methods=('GET', 'POST'))
 def erp_index():
     return render_template('landing/erp_dashboard.html')
+
+
+@bp.route('/under_maintenance', methods=('GET', 'POST'))
+def under_maintenance():
+    return render_template('landing/under_maintenance.html')
+
+
+@bp.route('/account', methods=('GET', 'POST'))
+def account():
+    return render_template('landing/account_settings.html')
+
+
+

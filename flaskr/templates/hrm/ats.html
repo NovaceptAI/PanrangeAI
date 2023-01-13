@@ -13,7 +13,7 @@
          name="viewport"
          content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"
          />
-      <title>Panrange ERP Account Settings</title>
+      <title>Panrange ERP HRM</title>
       <meta name="description" content="" />
       <!-- Favicon -->
       <link rel="icon" type="image/x-icon" href="../static/assets/img/favicon/favicon.ico" />
@@ -119,8 +119,8 @@
                   <li class="menu-header small text-uppercase">
                      <span class="menu-header-text">Pages</span>
                   </li>
-                  <li class="menu-item active" >
-                     <a href='/inventory/inventory_dashboard' class="menu-link">
+                  <li class="menu-item" >
+                     <a href="/inventory/inventory_dashboard" class="menu-link">
                         <i class="menu-icon tf-icons bx bx-dock-top" ></i>
                         <div data-i18n="Inventory">Inventory</div>
                      </a>
@@ -166,7 +166,7 @@
                 <div data-i18n="Inventory">Finance</div>
               </a>
             </li>
-            <li class="menu-item" >
+            <li class="menu-item active" >
               <a href="/hrm/hrm_board" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-money" ></i>
                 <div data-i18n="Inventory">HRM (Human Resource Management)</div>
@@ -402,26 +402,21 @@
                               <div class="card-body">
                                  <ul class="nav nav-pills flex-column flex-md-row mb-3" >
                                     <li class="nav-item">
-                                       <a class="nav-link active" href="/inventory/inventory_dashboard"><i class="bx bx-user me-1"></i> Inventory</a>
+                                       <a class="nav-link" href="/under_maintenance"><i class="bx bx-user me-1"></i> Time and Attendance</a>
                                     </li>
                                     <li class="nav-item">
-                                       <a class="nav-link" href="/inventory/sales_order"
-                                          ><i class="bx bx-money me-1"></i> Sales Order</a
+                                       <a class="nav-link" href="/under_maintenance"
+                                          ><i class="bx bx-move me-1"></i> Payroll</a
                                           >
                                     </li>
                                     <li class="nav-item">
-                                       <a class="nav-link" href="/inventory/transfers"
-                                          ><i class="bx bx-move me-1"></i> Transfers</a
+                                       <a class="nav-link" href="/under_maintenance"
+                                          ><i class="bx bxl-product-hunt me-1"></i> Appraisals and Progression</a
                                           >
                                     </li>
                                     <li class="nav-item">
-                                       <a class="nav-link" href="/inventory/products"
-                                          ><i class="bx bxl-product-hunt me-1"></i> Products</a
-                                          >
-                                    </li>
-                                    <li class="nav-item">
-                                       <a class="nav-link" href="/inventory/write_off"
-                                          ><i class="bx bxs-pen me-1"></i> Write-Offs</a
+                                       <a class="nav-link" href="/inventory/write_off">
+                                          ><i class="bx bxs-pen me-1"></i> Employee Self Service</a
                                           >
                                     </li>
                                     <li class="nav-item">
@@ -439,304 +434,214 @@
                            </div>
                         </div>
                      </div>
+                     <h3>Applicant Tracking System</h3>
                      <div class="card mb-4">
                         <div class="card-body">
                               <!-- Modal Sizes -->
-                           <h3>Stock Management</h3>
-                              <div class="col-lg-4 col-md-6">
-                                 <!-- Add Product -->
-
-                                 <!-- Stock Receipt-->
-                                 <div class="modal fade" id="stockadjustmentModal" tabindex="-1" aria-hidden="true">
-                                    <div class="modal-dialog modal-xl" role="document">
-                                       <div class="modal-content">
-                                          <div class="modal-header">
-                                             <h5 class="modal-title" id="adjustmentModal">Create Stock Adjustment</h5>
-                                             <button
-                                                type="button"
-                                                class="btn-close"
-                                                data-bs-dismiss="modal"
-                                                aria-label="Close"
-                                                ></button>
-                                          </div>
-                                          <div class="modal-body">
-                                             <div class="row g-2">
-                                                <div class="col mb-3">
-                                                   <label for="product_field_1" class="form-label">Products</label>
-                                                   <select id="product_field_1" class="form-control" >
-                                                      <option>No Products Added</option>
-                                                   </select>
-                                                   <div class="row g-2">
-                                                         <div class="col mb-0">
-                                                         <button type="button" class="btn btn-primary">Add Product</button>
-                                                         </div>
-                                                   </div>
-                                                </div>
-                                                <div class="col mb-3">
-                                                   <label for="quantity_field_1" class="form-label">Quantity</label>
-                                                   <input type="number" id="quantity_field_1" class="form-control" placeholder="0" />
-                                                </div>
-                                                <div class="col mb-0">
-                                                   <label for="total_field_1" class="form-label">Total</label>
-                                                   <input type="number" id="total_field_1" class="form-control" placeholder="0" />
-                                                </div>
-                                             </div>
-                                          </div>
-                                          <div class="modal-footer">
-                                             <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
-                                             Close
-                                             </button>
-                                             <button type="button" class="btn btn-primary">Save changes</button>
-                                          </div>
-                                       </div>
-                                    </div>
-                                 </div>
-
-                                 <!-- Stock Receipt -->
-                                 <div class="modal fade" id="exLargeModal1" tabindex="-1" aria-hidden="true">
-                                    <div class="modal-dialog modal-xl" role="document">
-                                       <div class="modal-content">
-                                          <div class="modal-header">
-                                             <h5 class="modal-title" id="exampleModalLabel41">Create Stock Receipt</h5>
-                                             <button
-                                                type="button"
-                                                class="btn-close"
-                                                data-bs-dismiss="modal"
-                                                aria-label="Close"
-                                                ></button>
-                                          </div>
-                                          <div class="modal-body">
-                                             <div class="row g-2">
-                                                <div class="col mb-3">
-                                                   <label for="product_field" class="form-label">Products</label>
-                                                   <select id="product_field" class="form-control" >
-                                                      <option>No Products Added</option>
-                                                   </select>
-                                                   <div class="row g-2">
-                                                         <div class="col mb-0">
-                                                         <button type="button" class="btn btn-primary">Add Product</button>
-                                                         </div>
-                                                   </div>
-                                                </div>
-                                                <div class="col mb-3">
-                                                   <label for="warehouse_field" class="form-label">Warehouse</label>
-                                                   <input type="text" id="warehouse_field" class="form-control"  />
-                                                </div>
-                                                <div class="col mb-0">
-                                                   <label for="dobExLarge1" class="form-label">Vendor</label>
-                                                   <select id="dobExLarge1" class="form-control" >
-                                                      <option>No Registered Vendors</option>
-                                                   </select>
-
-                                                   <div class="row g-2">
-                                                         <div class="col mb-0">
-                                                         <button type="button" class="btn btn-primary">Add Vendor</button>
-                                                         </div>
-                                                   </div>
-                                                </div>
-                                             </div>
-
-                                             <div class="row g-2">
-                                                <div class="col mb-3">
-                                                   <label for="purchase_field" class="form-label">Purchase Price</label>
-                                                   <input type="number" id="purchase_field" class="form-control" placeholder="0" />
-                                                </div>
-                                                <div class="col mb-3">
-                                                   <label for="sales_field" class="form-label">Sale Price</label>
-                                                   <input type="number" id="sales_field" class="form-control" placeholder="0" />
-                                                </div>
-                                                <div class="col mb-3">
-                                                   <label for="quantity_field" class="form-label">Quantity</label>
-                                                   <input type="number" id="quantity_field" class="form-control" placeholder="0" />
-                                                </div>
-                                                <div class="col mb-0">
-                                                   <label for="total_field" class="form-label">Total</label>
-                                                   <input type="number" id="total_field" class="form-control" placeholder="0" />
-                                                </div>
-                                             </div>
-                                             <div class="row g-2">
-                                                <div class="col mb-0">
-                                                   <label for="inventoryExLarge" class="form-label">Inventory Document #</label>
-                                                   <input type="text" id="inventoryExLarge" class="form-control"  />
-                                                </div>
-                                                <div class="col mb-0">
-                                                   <label for="inventoryExLarge1" class="form-label">Inventory Document Date</label>
-                                                   <input type="date" id="inventoryExLarge1" class="form-control" placeholder="Date" />
-                                                </div>
-                                                <div class="col mb-0">
-                                                   <label for="stockExLarge1" class="form-label">Stock Receipt Date</label>
-                                                   <input type="date" id="stockExLarge1" class="form-control" placeholder="Date" />
-                                                </div>
-                                             </div>
-                                             <div class="row g-2">
-                                                <div class="col mb-0">
-                                                   <label for="inventoryExLarge" class="form-label">Inventory Document Upload</label>
-                                                   <input type="file" id="documentExLarge" class="form-control" placeholder="" />
-                                                </div>
-                                                <div class="col mb-0">
-                                                   <label for="fieldExLarge1" class="form-label">Field</label>
-                                                   <input type="text" id="fieldExLarge1" class="form-control" placeholder="Id" />
-                                                </div>
-                                             </div>
-                                          </div>
-                                          <div class="modal-footer">
-                                             <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
-                                             Close
-                                             </button>
-                                             <button type="button" class="btn btn-primary">Save changes</button>
-                                          </div>
-                                       </div>
-                                    </div>
-                                 </div>
-
-                                 <!-- Bulk Edit Stock -->
-                                 <!-- Toggle Between Modals -->
-<!--                                 <div class="col-lg-4 col-md-6">-->
-<!--                                  <div class="mt-3">-->
-
-<!--                                    &lt;!&ndash; Modal 1&ndash;&gt;-->
-<!--                                    <div-->
-<!--                                      class="modal fade"-->
-<!--                                      id="modalToggle"-->
-<!--                                      aria-labelledby="modalToggleLabel"-->
-<!--                                      tabindex="-1"-->
-<!--                                      style="display: none"-->
-<!--                                      aria-hidden="true"-->
-<!--                                    >-->
-<!--                                      <div class="modal-dialog modal-dialog-centered">-->
-<!--                                        <div class="modal-content">-->
-<!--                                          <div class="modal-header">-->
-<!--                                            <h5 class="modal-title" id="modalToggleLabel">Select Stock Id</h5>-->
-<!--                                            <button-->
-<!--                                              type="button"-->
-<!--                                              class="btn-close"-->
-<!--                                              data-bs-dismiss="modal"-->
-<!--                                              aria-label="Close"-->
-<!--                                            ></button>-->
-<!--                                          </div>-->
-<!--                                          <div class="modal-body">-->
-<!--                                             <label for="modalselect">-->
-<!--                                                <select type="number" id="modalselect" class="form-control" >-->
-<!--                                                      <option>Stock ID 1</option>-->
-<!--                                                      <option>Stock ID 2</option>-->
-<!--                                                      <option>Stock ID 3</option>-->
-<!--                                                   </select>-->
-<!--                                             </label>-->
-<!--                                          </div>-->
-<!--                                          <div class="modal-footer">-->
-<!--                                            <button-->
-<!--                                              class="btn btn-primary"-->
-<!--                                              data-bs-target="#modalToggle2"-->
-<!--                                              data-bs-toggle="modal"-->
-<!--                                              data-bs-dismiss="modal"-->
-<!--                                            >-->
-<!--                                              Next-->
-<!--                                            </button>-->
-<!--                                          </div>-->
-<!--                                        </div>-->
-<!--                                      </div>-->
-<!--                                    </div>-->
-<!--                                    &lt;!&ndash; Modal 2&ndash;&gt;-->
-<!--                                    <div-->
-<!--                                      class="modal fade"-->
-<!--                                      id="modalToggle2"-->
-<!--                                      aria-hidden="true"-->
-<!--                                      aria-labelledby="modalToggleLabel2"-->
-<!--                                      tabindex="-1"-->
-<!--                                    >-->
-<!--                                      <div class="modal-dialog modal-dialog-centered">-->
-<!--                                        <div class="modal-content">-->
-<!--                                          <div class="modal-header">-->
-<!--                                            <h5 class="modal-title" id="modalToggleLabel2">Select Page</h5>-->
-<!--                                            <button-->
-<!--                                              type="button"-->
-<!--                                              class="btn-close"-->
-<!--                                              data-bs-dismiss="modal"-->
-<!--                                              aria-label="Close"-->
-<!--                                            ></button>-->
-<!--                                          </div>-->
-<!--                                          <div class="modal-body">-->
-<!--                                                      <button class="btn btn-secondary"-->
-<!--                                              data-bs-target="#modalToggle"-->
-<!--                                              data-bs-toggle="modal"-->
-<!--                                              data-bs-dismiss="modal"-->
-<!--                                              onClick="parent.location='bulk_export.html'"> Bulk Export </button>-->
-<!--                                                      <button class="btn btn-primary"-->
-<!--                                              data-bs-target="#modalToggle"-->
-<!--                                              data-bs-toggle="modal"-->
-<!--                                              data-bs-dismiss="modal"-->
-<!--                                              onClick="parent.location='bulk_import.html'"> Bulk Import </button>-->
-<!--                                                      <button class="btn btn-secondary"-->
-<!--                                              data-bs-target="#modalToggle"-->
-<!--                                              data-bs-toggle="modal"-->
-<!--                                              data-bs-dismiss="modal"-->
-<!--                                              onClick="parent.location='#'"> Bulk Edit </button>-->
-<!--                                          </div>-->
-<!--                                          <div class="modal-footer">-->
-<!--                                            <button-->
-<!--                                              class="btn btn-primary"-->
-<!--                                              data-bs-target="#modalToggle"-->
-<!--                                              data-bs-toggle="modal"-->
-<!--                                              data-bs-dismiss="modal"-->
-<!--                                              onClick="parent.location='#'"-->
-<!--                                            >-->
-<!--                                              Next-->
-<!--                                            </button>-->
-
-<!--                                          </div>-->
-<!--                                        </div>-->
-<!--                                      </div>-->
-<!--                                    </div>-->
-<!--                                  </div>-->
-<!--                                </div>-->
-                              </div>
+                           <h3>Job Descriptions</h3>
                               <div class="demo-inline-spacing">
+                                 <button
+                                    type="button"
+                                    class="btn btn-primary"
+                                    onClick="parent.location='/hrm/jobform'"
+                                    >
+                                 Job Form
+                                 </button>
 
+                                 <button
+                                    type="button"
+                                    class="btn btn-secondary"
+                                    onClick="parent.location='/hrm/joblist'"
+                                    >
+                                 Active List
+                                 </button>
+                              </div>
+                           </div>
+                     </div>
+
+                     <div class="card mb-4">
+                        <div class="card-body">
+                              <!-- Modal Sizes -->
+                           <h3>Onboarding</h3>
+                              <div class="demo-inline-spacing">
                                  <button
                                     type="button"
                                     class="btn btn-primary"
                                     data-bs-toggle="modal"
-                                    data-bs-target="#exLargeModal1"
+                                    data-bs-target="#productModal"
                                     >
-                                 Stock Receipt
+                                 Manpower and Approval
                                  </button>
 
                                  <button
                                     type="button"
                                     class="btn btn-secondary"
                                     data-bs-toggle="modal"
-                                    data-bs-target="#stockadjustmentModal"
+                                    data-bs-target="#exLargeModal"
                                     >
-                                 Stock Adjustment
+                                 Call Letters
                                  </button>
 
-<!--                                 <button-->
-<!--                                   type="button"-->
-<!--                                   class="btn btn-primary"-->
-<!--                                   data-bs-toggle="modal"-->
-<!--                                   data-bs-target="#modalToggle"-->
-<!--                                 >-->
-<!--                                   Bulk Edits-->
-<!--                                 </button>-->
+                                 <button
+                                    type="button"
+                                    class="btn btn-primary"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#exLargeModal"
+                                    >
+                                 Offer Letters
+                                 </button>
+
+                                 <button
+                                   type="button"
+                                   class="btn btn-secondary"
+                                   data-bs-toggle="modal"
+                                   data-bs-target="#modalToggle"
+                                 >
+                                   Appointment Letters
+                                 </button>
                               </div>
                            </div>
                      </div>
+
+                     <div class="card mb-4">
+                        <div class="card-body">
+                              <!-- Modal Sizes -->
+                           <h3>Online Job Postings</h3>
+                              <div class="demo-inline-spacing">
+                                 <button
+                                    type="button"
+                                    class="btn btn-primary"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#productModal"
+                                    >
+                                 Job Listings
+                                 </button>
+
+
+                              </div>
+                           </div>
+                     </div>
+
+                     <div class="card mb-4">
+                        <div class="card-body">
+                              <!-- Modal Sizes -->
+                           <h3>Applications</h3>
+                              <div class="demo-inline-spacing">
+                                 <button
+                                    type="button"
+                                    class="btn btn-primary"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#productModal"
+                                    >
+                                 Applicants List
+                                 </button>
+
+                              </div>
+                           </div>
+                     </div>
+
+                     <div class="card mb-4">
+                        <div class="card-body">
+                              <!-- Modal Sizes -->
+                           <h3>Resume Parsing</h3>
+                              <div class="demo-inline-spacing">
+                                 <button
+                                    type="button"
+                                    class="btn btn-primary"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#productModal"
+                                    >
+                                 Resume List
+                                 </button>
+
+                                 <button
+                                    type="button"
+                                    class="btn btn-secondary"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#exLargeModal1"
+                                    >
+                                 Automated Results
+                                 </button>
+
+                                 <button
+                                    type="button"
+                                    class="btn btn-primary"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#exLargeModal"
+                                    >
+                                 Review List
+                                 </button>
+
+                              </div>
+                           </div>
+                     </div>
+
+                     <div class="card mb-4">
+                        <div class="card-body">
+                              <!-- Modal Sizes -->
+                           <h3>Candidate Vetting</h3>
+                              <div class="demo-inline-spacing">
+                                 <button
+                                    type="button"
+                                    class="btn btn-primary"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#productModal"
+                                    >
+                                 Candidate List
+                                 </button>
+
+                                 <button
+                                    type="button"
+                                    class="btn btn-secondary"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#exLargeModal1"
+                                    >
+                                 Archived List
+                                 </button>
+
+                              </div>
+                           </div>
+                     </div>
+
+                     <div class="card mb-4">
+                        <div class="card-body">
+                              <!-- Modal Sizes -->
+                           <h3>Interview Scheduling</h3>
+                              <div class="demo-inline-spacing">
+                                 <button
+                                    type="button"
+                                    class="btn btn-primary"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#productModal"
+                                    >
+                                 Schedule Interview
+                                 </button>
+
+                                 <button
+                                    type="button"
+                                    class="btn btn-secondary"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#exLargeModal1"
+                                    >
+                                 Interview Format
+                                 </button>
+
+                              </div>
+                           </div>
+                     </div>
+
                      <!-- Bootstrap Dark Table -->
                      <div class="card">
-                        <h5 class="card-header">Inventory Order Table</h5>
+                        <h5 class="card-header">Employee Status Table</h5>
                         <div class="table-responsive text-nowrap">
                            <table class="table table-dark">
                               <thead>
                                  <tr>
                                     <th>Name</th>
-                                    <th>Inventory Document#</th>
-                                    <th>Responsible Person</th>
+                                    <th>Employee Documents#</th>
                                     <th>Status</th>
-                                    <th>Modified On</th>
-                                    <th>Type</th>
-                                    <th>Vendor</th>
-                                    <th>Total</th>
-                                    <th>Warehouses</th>
+                                    <th>Role</th>
+                                    <th>Joined On</th>
                                     <th>Action</th>
                                  </tr>
                               </thead>

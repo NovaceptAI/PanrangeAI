@@ -17,3 +17,13 @@ def inventory_dashboard():
 @bp.route('/key_data', methods=('GET', 'POST'))
 def key_data_board():
     return render_template('finance/key_data.html')
+
+
+@bp.route('/reporting', methods=('GET', 'POST'))
+def reporting_data():
+    return render_template('finance/reporting.html')
+
+
+@bp.route('/invoice_form', methods=('GET', 'POST'))
+def invoice_form():
+    return render_template('finance/invoice_form.html')

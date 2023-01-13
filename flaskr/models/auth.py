@@ -151,6 +151,50 @@ def login():
     return render_template('auth/login.html')
 
 
+@bp.route('/password', methods=('GET', 'POST'))
+def password():
+    if request.method == 'POST':
+        # password = request.form['password']
+        # db = get_db()
+        # error = None
+        #
+        # # Web App Login
+        # web_user = db.admin_creds.find({"username": username, "type": "web"})
+        # web_users = db.admin_creds.count_documents({"username": username, "type": "web"})
+        #
+        # # Erp Login
+        # erp_user = db.admin_creds.find({"username": username, "type": "erp"})
+        # erp_users = db.admin_creds.count_documents({"username": username, "type": "erp"})
+        #
+        # if web_users != 0:
+        #     for doc in web_user:
+        #         db_password = doc["password"]
+        #     if web_users == 0:
+        #         error = 'Incorrect username.'
+        #     elif password != db_password:
+        #         error = 'Incorrect password.'
+        #
+        #     if error is None:
+        #         # session.clear()
+        #         # session['user_id'] = user['id']
+        #         return redirect(url_for('landing.web_index'))
+        #
+        # if erp_users != 0:
+        #     for doc in erp_user:
+        #         db_password = doc["password"]
+        #     if erp_users == 0:
+        #         error = 'Incorrect username.'
+        #     elif password != db_password:
+        #         error = 'Incorrect password.'
+        #
+        #     if error is None:
+        #         # session.clear()
+        #         # session['user_id'] = user['id']
+        return redirect(url_for('finance.digital_storage_finance'))
+
+    return render_template('auth/password.html')
+
+
 @bp.route('/register', methods=('GET', 'POST'))
 def register():
     if request.method == 'POST':

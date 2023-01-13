@@ -3,7 +3,7 @@ from flask import Flask, jsonify
 # from flask.ext.session import Session
 from .models import auth, landing_pages, web_app
 from .models.erp import inventory_management, finance, hrm, crm, marketing, company, automation, s_s, t_p, \
-    collaboration, more
+    collaboration, more, omnisales
 from .models.web_app import shop
 from flask_jwt_extended import JWTManager, jwt_required, get_jwt_identity
 
@@ -49,6 +49,7 @@ def add_blueprints(app):
     app.register_blueprint(t_p.bp)
     app.register_blueprint(collaboration.bp)
     app.register_blueprint(more.bp)
+    app.register_blueprint(omnisales.bp)
 
     return app
 

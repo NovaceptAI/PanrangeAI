@@ -13,3 +13,27 @@ bp = Blueprint('hrm', __name__, url_prefix='/hrm')
 def hrm():
     return render_template('hrm/hrm.html')
 
+
+@bp.route('/ats', methods=('GET', 'POST'))
+def ats():
+    return render_template('hrm/ats.html')
+
+
+@bp.route('/manpower', methods=('GET', 'POST'))
+def manpower():
+    return render_template('hrm/manpower_dashboard.html')
+
+
+@bp.route('/requisition', methods=('GET', 'POST'))
+def requisition():
+    return render_template('hrm/manpower_requisition.html')
+
+
+@bp.route('/joblist', methods=('GET', 'POST'))
+def joblist():
+    return render_template('hrm/job_list.html')
+
+
+@bp.route('/jobform', methods=('GET', 'POST'))
+def job_form():
+    return render_template('hrm/job_posting.html')

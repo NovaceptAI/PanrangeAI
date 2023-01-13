@@ -396,12 +396,50 @@
                <div class="content-wrapper">
                   <!-- Content -->
                   <div class="container-xxl flex-grow-1 container-p-y">
+                     <div class="row">
+                        <div class="col-md-12">
+                           <div class="card mb-4" style="background: #35393d">
+                              <div class="card-body">
+                                 <ul class="nav nav-pills flex-column flex-md-row mb-3" >
+                                    <li class="nav-item">
+                                       <a class="nav-link" href="/under_maintenance"><i class="bx bx-user me-1"></i> Downloads</a>
+                                    </li>
+                                    <li class="nav-item">
+                                       <a class="nav-link" href="/finance/reporting"
+                                          ><i class="bx bx-move me-1"></i> Reports</a
+                                          >
+                                    </li>
+                                    <li class="nav-item">
+                                       <a class="nav-link" href="/under_maintenance"
+                                          ><i class="bx bxl-product-hunt me-1"></i> Today's Variations</a
+                                          >
+                                    </li>
+                                    <li class="nav-item">
+                                       <a class="nav-link" href="/inventory/write_off">
+                                          ><i class="bx bxs-pen me-1"></i> Cost Management</a
+                                          >
+                                    </li>
+                                    <li class="nav-item">
+                                       <a class="nav-link" href="/inventory/analytics"
+                                          ><i class="bx bxs-analyse me-1"></i> Analytics</a
+                                          >
+                                    </li>
+                                    <li class="nav-item">
+                                       <a class="nav-link" href="/under_maintenance"
+                                          ><i class="bx bxs-archive-in me-1"></i> Settings</a
+                                          >
+                                    </li>
+                                 </ul>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
 
 
                      <div class="card mb-4">
                         <div class="card-body">
                               <!-- Modal Sizes -->
-                           <h3>Panrange Balance Sheets</h3>
+                           <h3>Report Management</h3>
                               <div class="col-lg-4 col-md-6">
                                  <!-- Panrange Finance Status -->
 
@@ -481,7 +519,7 @@
                                     data-bs-toggle="modal"
                                     onClick="parent.location='/erp_dashboard'"
                                     >
-                                 Panrange Financial Status Sheets
+                                 Business Intelligence
                                  </button>
 
                                  <button
@@ -490,423 +528,17 @@
                                     data-bs-toggle="modal"
                                     onClick="parent.location='key_data'"
                                     >
-                                 Key Data
-                                 </button>
-                              </div>
-                           </div>
-                     </div>
-
-                     <div class="card mb-4">
-                        <div class="card-body">
-                              <!-- Modal Sizes -->
-                           <h3>Billing And Invoice</h3>
-                              <div class="col-lg-4 col-md-6">
-                                 <!-- Add Product -->
-                                 <div class="modal fade" id="productModal" tabindex="-1" aria-hidden="true">
-                                    <div class="modal-dialog modal-xl" role="document">
-                                       <div class="modal-content">
-                                          <div class="modal-header">
-                                             <h5 class="modal-title" id="productModalLabel41">Manpower and Approval</h5>
-                                             <button
-                                                type="button"
-                                                class="btn-close"
-                                                data-bs-dismiss="modal"
-                                                aria-label="Close"
-                                                ></button>
-                                          </div>
-                                          <div class="modal-body">
-                                             <div class="row g-2">
-                                                <div class="col mb-0">
-                                                   <input class="form-check-input" type="checkbox" value="" id="defaultCheck3" checked />
-                                                   <label class="form-check-label" for="defaultCheck3"> </label>
-                                                </div>
-                                                <div class="col mb-0">
-                                                   <label for="productExLarge111" class="form-label">Key Data</label>
-                                                   <select type="number" id="productExLarge111" class="form-control" >
-                                                      <option>Product 1</option>
-                                                      <option>Product 2</option>
-                                                      <option>Product 3</option>
-                                                   </select>
-                                                </div>
-                                                <div class="col mb-0">
-                                                   <label for="upload111" class="form-label">Product Photo</label>
-                                                   <input type="file" id="upload111" class="form-control" placeholder="Upload">
-                                                </div>
-                                                <div class="col mb-0">
-                                                   <label for="barcodexLarge111" class="form-label">Barcode</label>
-                                                   <select type="number" id="barcodexLarge111" class="form-control">
-                                                      <option>Barcode 1</option>
-                                                      <option>Barcode 2</option>
-                                                      <option>Barcode 3</option>
-                                                   </select>
-                                                </div>
-                                                <div class="col mb-0">
-                                                   <label for="salesprice111" class="form-label">Sales Price</label>
-                                                   <input type="number" id="salesprice111" class="form-control" placeholder="12000 Rupees">
-                                                </div>
-                                                <div class="col mb-0">
-                                                   <label for="quantity111" class="form-label">Quantity Arrived</label>
-                                                   <input type="number" id="quantity111" class="form-control" placeholder="0">
-                                                </div>
-                                                <div class="col mb-0">
-                                                   <label for="warehouse111" class="form-label">Warehouse</label>
-                                                   <select type="number" id="warehouse111" class="form-control">
-                                                      <option>Warehouse 1</option>
-                                                      <option>Warehouse 2</option>
-                                                   </select>
-                                                </div>
-                                             </div>
-                                             <hr>
-                                             <div class="row g-2">
-                                                <div class="col mb-0">
-                                                   <label>
-                                                      <input class="form-check-input" type="checkbox" value=""  />
-                                                   </label>
-                                                   <label class="form-check-label" for="defaultCheck3">  </label>
-                                                </div>
-                                                <div class="col mb-0">
-                                                   <label for="productExLarge1111" class="form-label">Select Product</label>
-                                                   <select type="number" id="productExLarge1111" class="form-control" >
-                                                      <option>Product 1</option>
-                                                      <option>Product 2</option>
-                                                      <option>Product 3</option>
-                                                   </select>
-                                                </div>
-                                                <div class="col mb-0">
-                                                   <label for="upload1111" class="form-label">Product Photo</label>
-                                                   <input type="file" id="upload1111" class="form-control" placeholder="Upload">
-                                                </div>
-                                                <div class="col mb-0">
-                                                   <label for="barcodexLarge1111" class="form-label">Barcode</label>
-                                                   <select type="number" id="barcodexLarge1111" class="form-control">
-                                                      <option>Barcode 1</option>
-                                                      <option>Barcode 2</option>
-                                                      <option>Barcode 3</option>
-                                                   </select>
-                                                </div>
-                                                <div class="col mb-0">
-                                                   <label for="salesprice1111" class="form-label">Sales Price</label>
-                                                   <input type="number" id="salesprice1111" class="form-control" placeholder="12000 Rupees">
-                                                </div>
-                                                <div class="col mb-0">
-                                                   <label for="quantity1111" class="form-label">Quantity Arrived</label>
-                                                   <input type="number" id="quantity1111" class="form-control" placeholder="0">
-                                                </div>
-                                                <div class="col mb-0">
-                                                   <label for="warehouse1111" class="form-label">Warehouse</label>
-                                                   <select type="number" id="warehouse1111" class="form-control">
-                                                      <option>Warehouse 1</option>
-                                                      <option>Warehouse 2</option>
-                                                   </select>
-                                                </div>
-                                             </div>
-                                          </div>
-                                          <div class="modal-footer">
-                                             <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
-                                             Add Row
-                                             </button>
-                                             <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
-                                             Close
-                                             </button>
-                                             <button type="button" class="btn btn-primary">Save changes</button>
-                                          </div>
-                                       </div>
-                                    </div>
-                                 </div>
-
-                                 <!-- Stock Receipt-->
-                                 <div class="modal fade" id="createModal" tabindex="-1" aria-hidden="true">
-                                    <div class="modal-dialog modal-xl" role="document">
-                                       <div class="modal-content">
-                                          <div class="modal-header">
-                                             <h5 class="modal-title" id="createModalLabel41">Create Product</h5>
-                                             <button
-                                                type="button"
-                                                class="btn-close"
-                                                data-bs-dismiss="modal"
-                                                aria-label="Close"
-                                                ></button>
-                                          </div>
-                                          <div class="modal-body">
-                                             <div class="row g-2">
-                                                <div class="col mb-0">
-                                                   <label for="createExLarge1111" class="form-label">Name</label>
-                                                   <input type="text" id="createExLarge1111" class="form-control" >
-                                                </div>
-                                                <div class="col mb-0">
-                                                   <label for="chooseExLarge1111" class="form-label">Choose Product Photo</label>
-                                                   <input type="file" id="chooseExLarge1111" class="form-control" >
-                                                </div>
-                                                <div class="col mb-0">
-                                                   <label for="barExLarge1111" class="form-label">Enter Barcode</label>
-                                                   <input type="file" id="barExLarge1111" class="form-control" >
-                                                </div>
-                                             </div>
-                                             <br>
-                                             <div class="row g-2">
-                                                <div class="col mb-0">
-                                                   <label for="descriptionExLarge1111" class="form-label">Description</label>
-                                                   <textarea id="descriptionExLarge1111" class="form-control">Detailed Description of the product</textarea>
-                                                </div>
-                                             </div>
-                                             <br>
-                                             <div class="row g-2">
-                                                <div class="col mb-0">
-                                                   <label for="createproductExLarge1111" class="form-label">Select Visibility</label>
-                                                   <select type="number" id="createproductExLarge1111" class="form-control" >
-                                                      <option>Panrange Web App</option>
-                                                      <option>Panrange Mobile App</option>
-                                                   </select>
-                                                </div>
-                                                <div class="col mb-0">
-                                                   <label for="unitExLarge1111" class="form-label">Unit Measurement</label>
-                                                   <input type="text" id="unitExLarge1111" class="form-control" >
-                                                </div>
-                                                <div class="col mb-0">
-                                                   <label for="priceExLarge1111" class="form-label">Retail Price</label>
-                                                   <input type="file" id="priceExLarge1111" class="form-control" >
-                                                </div>
-                                             </div>
-                                             <hr>
-                                             <div class="row g-2">
-                                                <div class="col mb-0">
-                                                   <label for="addfieldExLarge1111" class="form-label">Add Field</label>
-                                                   <select type="number" id="addfieldExLarge1111" class="form-control" >
-                                                      <option>Id</option>
-                                                      <option>Modified On </option>
-                                                      <option>Modified By </option>
-                                                      <option>Created On </option>
-                                                      <option>Created By </option>
-                                                   </select>
-                                                </div>
-                                                <div class="col mb-0">
-                                                   <label for="createfieldExLarge1111" class="form-label">Create Field</label>
-                                                   <select type="number" id="createfieldExLarge1111" class="form-control" >
-                                                      <option>String</option>
-                                                      <option>List </option>
-                                                      <option>Datetime </option>
-                                                      <option>Google Map </option>
-                                                      <option>Yes/No Field </option>
-                                                   </select>
-                                                </div>
-                                             </div>
-                                          </div>
-                                          <div class="modal-footer">
-                                             <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
-                                             Close
-                                             </button>
-                                             <button type="button" class="btn btn-primary">Save changes</button>
-                                          </div>
-                                       </div>
-                                    </div>
-                                 </div>
-
-                                 <!-- Stock Adjustments -->
-                                 <div class="modal fade" id="exLargeModal1" tabindex="-1" aria-hidden="true">
-                                    <div class="modal-dialog modal-xl" role="document">
-                                       <div class="modal-content">
-                                          <div class="modal-header">
-                                             <h5 class="modal-title" id="exampleModalLabel41">Create Stock Receipt</h5>
-                                             <button
-                                                type="button"
-                                                class="btn-close"
-                                                data-bs-dismiss="modal"
-                                                aria-label="Close"
-                                                ></button>
-                                          </div>
-                                          <div class="modal-body">
-                                             <div class="row">
-                                                <div class="col mb-3">
-                                                   <label for="nameExLarge1" class="form-label">Name</label>
-                                                   <input type="text" id="nameExLarge1" class="form-control" placeholder="Shipping Manifest#" />
-                                                </div>
-                                             </div>
-                                             <div class="row g-2">
-                                                <div class="col mb-0">
-                                                   <label for="emailExLarge1" class="form-label">Total</label>
-                                                   <input type="number" id="emailExLarge1" class="form-control" placeholder="0" />
-                                                </div>
-                                                <div class="col mb-0">
-                                                   <label for="dobExLarge1" class="form-label">Vendor</label>
-                                                   <select type="text" id="dobExLarge1" class="form-control" >
-                                                      <option>Vendor 1</option>
-                                                      <option>Vendor 2</option>
-                                                   </select>
-                                                </div>
-                                             </div>
-                                             <div class="row g-2">
-                                                <div class="col mb-0">
-                                                   <label for="inventoryExLarge" class="form-label">Inventory Document #</label>
-                                                   <input type="number" id="inventoryExLarge" class="form-control" placeholder="0" />
-                                                </div>
-                                                <div class="col mb-0">
-                                                   <label for="inventoryExLarge1" class="form-label">Inventory Document Date</label>
-                                                   <input type="date" id="inventoryExLarge1" class="form-control" placeholder="Date" />
-                                                </div>
-                                                <div class="col mb-0">
-                                                   <label for="stockExLarge1" class="form-label">Stock Receipt Date</label>
-                                                   <input type="date" id="stockExLarge1" class="form-control" placeholder="Date" />
-                                                </div>
-                                             </div>
-                                             <div class="row g-2">
-                                                <div class="col mb-0">
-                                                   <label for="inventoryExLarge" class="form-label">Inventory Document Upload</label>
-                                                   <input type="file" id="documentExLarge" class="form-control" placeholder="" />
-                                                </div>
-                                                <div class="col mb-0">
-                                                   <label for="fieldExLarge1" class="form-label">Field</label>
-                                                   <input type="text" id="fieldExLarge1" class="form-control" placeholder="Id" />
-                                                </div>
-                                             </div>
-                                          </div>
-                                          <div class="modal-footer">
-                                             <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
-                                             Close
-                                             </button>
-                                             <button type="button" class="btn btn-primary">Save changes</button>
-                                          </div>
-                                       </div>
-                                    </div>
-                                 </div>
-
-                                 <!-- Bulk Edit Stock -->
-                                 <!-- Toggle Between Modals -->
-                                 <div class="col-lg-4 col-md-6">
-                                  <div class="mt-3">
-
-                                    <!-- Modal 1-->
-                                    <div
-                                      class="modal fade"
-                                      id="modalToggle"
-                                      aria-labelledby="modalToggleLabel"
-                                      tabindex="-1"
-                                      style="display: none"
-                                      aria-hidden="true"
-                                    >
-                                      <div class="modal-dialog modal-dialog-centered">
-                                        <div class="modal-content">
-                                          <div class="modal-header">
-                                            <h5 class="modal-title" id="modalToggleLabel">Select Stock Id</h5>
-                                            <button
-                                              type="button"
-                                              class="btn-close"
-                                              data-bs-dismiss="modal"
-                                              aria-label="Close"
-                                            ></button>
-                                          </div>
-                                          <div class="modal-body">
-                                             <label for="modalselect">
-                                                <select type="number" id="modalselect" class="form-control" >
-                                                      <option>Stock ID 1</option>
-                                                      <option>Stock ID 2</option>
-                                                      <option>Stock ID 3</option>
-                                                   </select>
-                                             </label>
-                                          </div>
-                                          <div class="modal-footer">
-                                            <button
-                                              class="btn btn-primary"
-                                              data-bs-target="#modalToggle2"
-                                              data-bs-toggle="modal"
-                                              data-bs-dismiss="modal"
-                                            >
-                                              Next
-                                            </button>
-                                          </div>
-                                        </div>
-                                      </div>
-                                    </div>
-                                    <!-- Modal 2-->
-                                    <div
-                                      class="modal fade"
-                                      id="modalToggle2"
-                                      aria-hidden="true"
-                                      aria-labelledby="modalToggleLabel2"
-                                      tabindex="-1"
-                                    >
-                                      <div class="modal-dialog modal-dialog-centered">
-                                        <div class="modal-content">
-                                          <div class="modal-header">
-                                            <h5 class="modal-title" id="modalToggleLabel2">Select Page</h5>
-                                            <button
-                                              type="button"
-                                              class="btn-close"
-                                              data-bs-dismiss="modal"
-                                              aria-label="Close"
-                                            ></button>
-                                          </div>
-                                          <div class="modal-body">
-                                                      <button class="btn btn-secondary"
-                                              data-bs-target="#modalToggle"
-                                              data-bs-toggle="modal"
-                                              data-bs-dismiss="modal"
-                                              onClick="parent.location='bulk_export.html'"> Bulk Export </button>
-                                                      <button class="btn btn-primary"
-                                              data-bs-target="#modalToggle"
-                                              data-bs-toggle="modal"
-                                              data-bs-dismiss="modal"
-                                              onClick="parent.location='bulk_import.html'"> Bulk Import </button>
-                                                      <button class="btn btn-secondary"
-                                              data-bs-target="#modalToggle"
-                                              data-bs-toggle="modal"
-                                              data-bs-dismiss="modal"
-                                              onClick="parent.location='#'"> Bulk Edit </button>
-                                          </div>
-                                          <div class="modal-footer">
-                                            <button
-                                              class="btn btn-primary"
-                                              data-bs-target="#modalToggle"
-                                              data-bs-toggle="modal"
-                                              data-bs-dismiss="modal"
-                                              onClick="parent.location='#'"
-                                            >
-                                              Next
-                                            </button>
-
-                                          </div>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                              <div class="demo-inline-spacing">
-                                 <button
-                                    type="button"
-                                    class="btn btn-primary"
-                                    data-bs-toggle="modal"
-                                    data-bs-target="#productModal"
-                                    >
-                                 Pending Bills
-                                 </button>
-
-                                 <button
-                                    type="button"
-                                    class="btn btn-secondary"
-                                    data-bs-toggle="modal"
-                                    data-bs-target="#exLargeModal1"
-                                    >
-                                 Invoices
+                                 Analytics
                                  </button>
 
                                  <button
                                     type="button"
                                     class="btn btn-primary"
                                     data-bs-toggle="modal"
-                                    data-bs-target="#exLargeModal"
+                                    onClick="parent.location='/erp_dashboard'"
                                     >
-                                 Settings
+                                 Reports
                                  </button>
-
-                                 <button
-                                   type="button"
-                                   class="btn btn-secondary"
-                                   data-bs-toggle="modal"
-                                   data-bs-target="#modalToggle"
-                                 >
-                                   Digital Storage Key(SuperAdmin)
-                                 </button>
-
 
                               </div>
                            </div>
