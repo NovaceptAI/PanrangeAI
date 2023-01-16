@@ -1,4 +1,4 @@
-import flaskr
+import flaskr.__init__
 app = flaskr.create_app()
 # app.config['GOOGLE_APPLICATION_CREDENTIALS'] = "./panrange-online-b1dbaad59f70.json"
 app.secret_key = 'super secret key'
