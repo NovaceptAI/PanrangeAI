@@ -30,6 +30,3 @@ def under_maintenance():
 @bp.route('/account', methods=('GET', 'POST'))
 def account():
     return render_template('landing/account_settings.html')
-
-
-
